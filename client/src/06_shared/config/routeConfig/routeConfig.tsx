@@ -1,7 +1,7 @@
 import { AdminPage } from '02_pages/AdminPage/ui/AdminPage'
 import { AuthPage } from '02_pages/AuthPage/ui/AuthPage'
 import { BasketPage } from '02_pages/BasketPage/ui/BasketPage'
-import { DevicePage } from '02_pages/DevicePage/ui/DevicePage'
+import { DeviceDetailsPage } from '02_pages/DeviceDetailsPage/ui/DeviceDetailsPage'
 import { NotFoundPage } from '02_pages/NotFoundPage/ui/NotFoundPage'
 import { ShopPage } from '02_pages/ShopPage/ui/ShopPage'
 import type { RouteProps } from 'react-router-dom'
@@ -14,7 +14,7 @@ export enum AppRoutes {
 	ADMIN = 'admin',
 	LOGIN = 'login',
 	REGISTRATION = 'registration',
-	DEVICE = 'device',
+	DEVICE_DETAILS = 'device_details',
 	SHOP = 'shop',
 	BASKET = 'basket',
 
@@ -27,7 +27,7 @@ export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.ADMIN]: '/admin',
   [AppRoutes.LOGIN]: '/login',
   [AppRoutes.REGISTRATION]: '/registration',
-  [AppRoutes.DEVICE]: '/device/', //+id
+  [AppRoutes.DEVICE_DETAILS]: '/device/', //+id
   [AppRoutes.BASKET]: '/basket',
 
   //last
@@ -44,9 +44,9 @@ export const routeConfig: Record<AppRoutes, AppRouteProps> = {
     element: <AdminPage />,
     authOnly: true
   },
-  [AppRoutes.DEVICE]: {
-    path: `${RoutePath.device}:id`,
-    element: <DevicePage />
+  [AppRoutes.DEVICE_DETAILS]: {
+    path: `${RoutePath.device_details}:id`,
+    element: <DeviceDetailsPage />
   },
   [AppRoutes.LOGIN]: {
     path: RoutePath.login,
@@ -68,3 +68,4 @@ export const routeConfig: Record<AppRoutes, AppRouteProps> = {
     element: <NotFoundPage />
   }
 }
+

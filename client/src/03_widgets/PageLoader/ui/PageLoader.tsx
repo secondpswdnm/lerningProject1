@@ -1,12 +1,8 @@
-import { CircularProgress } from '@mui/material'
+import { Loader } from '06_shared/ui/Loader/Loader'
 import cls from './PageLoader.module.css'
 
-
-
 export const PageLoader = () => {
-  return (
-    <div className={cls.wrapper}>
-      <CircularProgress size={150} color={'primary'} />
-    </div>
-  ) 
+  return <div className={cls.wrapper}>
+    <Loader/>
+  </div>
 }

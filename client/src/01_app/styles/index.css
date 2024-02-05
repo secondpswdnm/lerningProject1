@@ -1,0 +1,40 @@
+@import 'reset.css';
+@import './variables/global.css';
+@import './themes/light.css';
+@import './themes/dark.css';
+
+
+.app,
+.app_modal {
+  font: var(--font-m);
+  color: var(--primary-color);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-color);
+  height: 100dvh;
+  min-height: 400px;
+  min-width: 400px;
+  overflow: hidden;
+}
+
+.flex-wrapper {
+  max-width: 1300px;
+  width: 100%;
+}
+
+.content-page {
+  display: flex;
+  box-shadow: 0 3px 15px 5px var(--secondary-color);
+}
+
+.page-wrapper {
+  /*flex-grow: 1;*/
+  width: 100%;
+  padding: 15px 1px 15px 15px;
+  height: calc(100dvh - var(--navbar-height));
+  /*overflow-y: auto;*/
+}

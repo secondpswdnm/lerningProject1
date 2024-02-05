@@ -1,0 +1,27 @@
+.Navbar {
+  width: 100%;
+  height: var(--navbar-height);
+  background: var(--inverted-bg-color);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 3px 15px 5px var(--secondary-color);
+  margin-bottom: 7px;
+}
+
+.items {
+  display: flex;
+  gap: 5px;
+  text-decoration: none;
+}
+
+.btns{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: auto;
+  gap: 10px;
+}
+
+.switcher {
+  margin-left: 10px;
+}
