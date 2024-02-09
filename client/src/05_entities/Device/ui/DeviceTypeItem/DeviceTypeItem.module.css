@@ -1,0 +1,5 @@
+.selected {
+  color: var(--bg-color);
+  background: var(--inverted-bg-color);
+  transform: scale(.95);
+}

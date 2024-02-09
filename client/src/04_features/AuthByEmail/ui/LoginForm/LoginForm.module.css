@@ -1,0 +1,28 @@
+.LoginForm{
+  width: 100%;
+  /*border: 1px solid var(--primary-color);*/
+  background: var(--inverted-bg-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  box-shadow: 4px 4px 15px 0  var(--secondary-color);
+}
+
+.formFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.formFooterText {
+  padding-left: 2px;
+  display: flex;
+  gap: 5px;
+}
+
+.text {
+  opacity:80%;
+}

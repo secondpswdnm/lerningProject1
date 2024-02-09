@@ -1,0 +1,22 @@
+.primary {
+  fill: var(--primary-color);
+}
+
+.secondary {
+  fill: var(--secondary-color);
+}
+
+.inverted {
+  fill: var(--inverted-primary-color);
+}
+
+.secondary_inverted {
+  fill: var(--inverted-secondary-color);
+}
+.background {
+  fill: var(--bg-color);
+}
+
+.inverted_bg {
+  fill: var(--inverted-bg-color);
+}

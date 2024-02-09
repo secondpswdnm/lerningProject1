@@ -1,0 +1,8 @@
+.dark {
+  --bg-color: #211d1d;
+  --inverted-bg-color: rgb(199, 28, 28);
+  --primary-color: #9a9a9a;
+  --secondary-color: #dc1010;
+  --inverted-primary-color: #704bff;
+  --inverted-secondary-color: #496ee8;
+}

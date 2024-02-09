@@ -1,0 +1,43 @@
+.brands {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 0;
+  justify-content: start;
+  margin-right: 10px;
+  height: 100%;
+  transition: 0.3s;
+
+  &::-webkit-scrollbar {
+    height: 7px;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--inverted-bg-color);
+    border-radius: 5px;
+  }
+}
+
+.brand {
+  padding-right: 5px;
+
+  &:last-child {
+    padding-right: 1px;
+  }
+}
+
+.brands .brand {
+  scroll-snap-align: start;
+}
+
+.btn {
+  height: 100%;
+}
+
+.scrollable {
+  padding-bottom: 5px;
+}

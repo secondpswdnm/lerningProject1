@@ -34,7 +34,7 @@
 .page-wrapper {
   /*flex-grow: 1;*/
   width: 100%;
-  padding: 15px 1px 15px 15px;
+  padding: 15px 1px 15px 1px;
   height: calc(100dvh - var(--navbar-height));
   /*overflow-y: auto;*/
 }

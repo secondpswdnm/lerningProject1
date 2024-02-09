@@ -1,0 +1,104 @@
+.primary {
+  --bg-input: var(--bg-color);
+  --border-color-before: var(--inverted-bg-color);
+  --bg-label: var(--bg-color);
+  --shadow-input-cheked: var(--primary-color)
+}
+
+.size_s {
+  --font-size: var(--font-size-s)
+}
+
+.size_m {
+  --font-size: var(--font-size-m)
+}
+
+.toggle {
+
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: var(--font-size);
+  width: 5.3em;
+
+
+}
+
+.toggle input,
+.toggle input:active {
+  border: 0;
+  height: 0;
+  opacity: 0;
+  outline: none;
+  position: absolute;
+  left: -5000px;
+  width: 0;
+}
+
+.toggle label {
+  background: var(--bg-input);
+  border: 0.2em solid var(--border-color-before);
+  border-radius: 1.6em;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  height: 3.2em;
+  padding: 1em;
+  position: relative;
+  transition: 0.3s ease-out;
+  width: 100%;
+}
+
+.toggle label::before {
+  background: var(--bg-label);
+  border-radius: 1.4em;
+  box-shadow: 0 0.3em 0.3em rgba(0, 0, 0, 0.2), 0 0 0 0.1em var(--border-color-before);
+  content: '';
+  display: block;
+  height: 2.8em;
+  left: 0;
+  position: absolute;
+  right: auto;
+  text-indent: 4em;
+  top: 0;
+  transition: 0.25s ease-in-out;
+  width: 2.8em;
+  z-index: 2;
+}
+
+.toggle label::after {
+  background: var(--bg-label);
+  border-radius: 1.4em;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: 0.25s ease-in-out;
+  width: 2.8em;
+  z-index: 1;
+}
+
+.toggle input:active + label::before {
+  width: 3.2em;
+}
+
+.toggle input:checked + label {
+  border-color: var(--bg-input);
+  box-shadow: inset 0 0 0 2em var(--bg-input);
+}
+
+.toggle input:checked + label::after {
+  background-color: var(--border-color-before);
+  right: 1.4em;
+  width: 100%;
+}
+
+.toggle input:checked + label::before {
+  box-shadow: 0 0 0 0.1em transparent, 0 0.3em 0.3em var(--bg-input);
+  left: calc(100% - 2.8em);
+}
+
+.toggle input:checked:active + label::before {
+  left: calc(100% - 3.2em);
+}

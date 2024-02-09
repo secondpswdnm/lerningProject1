@@ -6,14 +6,9 @@ import { classNames } from '06_shared/lib/classNames/classNames'
 import { useAppDispatch, useAppSelector } from '06_shared/lib/hooks/StoreHooks'
 import { Button } from '06_shared/ui/Button/Button'
 import { ButtonTheme } from '06_shared/ui/Button/model/button'
-import { Icon } from '06_shared/ui/Icon/Icon'
-import { IconTheme } from '06_shared/ui/Icon/model/icon'
 import { ThemeSwitcher } from '06_shared/ui/ThemeSwitcher/ThemeSwitcher'
-import { ToggleSwitch } from '06_shared/ui/ToggleSwitch/ToggleSwitch'
 import type { ChangeEvent } from 'react'
-import { useState } from 'react'
-import { useCallback, useMemo } from 'react'
-import EyeIcon from '../../../../06_shared/assets/icons/eye.svg'
+import { useCallback, useMemo, useState } from 'react'
 import cls from './Navbar.module.css'
 
 
@@ -47,9 +42,6 @@ export const Navbar = ({ className }: NavbarProps) => {
     ))
   ), [])
 
-  const onLoginHandler = useCallback(() => {
-    dispatch(userActions.setIsAuth(true))
-  }, [dispatch])
   const onLogoutHandler = useCallback(() => {
     dispatch(userActions.setIsAuth(false))
   }, [dispatch])

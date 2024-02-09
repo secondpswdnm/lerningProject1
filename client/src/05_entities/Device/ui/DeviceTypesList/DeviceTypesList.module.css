@@ -1,0 +1,36 @@
+.DeviceTypesList {
+  list-style: none;
+  display: grid;
+  gap: 5px;
+  grid-auto-rows: max-content;
+  height: calc(100dvh - 158px);
+  overflow-y: auto;
+  direction: rtl;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y mandatory;
+  scroll-padding-inline: 0;
+  padding-left: 13px;
+
+  &::-webkit-scrollbar {
+    width: 7px;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--inverted-bg-color);
+    border-radius: 5px;
+  }
+}
+
+.DeviceTypesList .type {
+  scroll-snap-align: start;
+}
+
+.type {
+  width: 100%;
+  overflow: hidden;
+}
+
+.scrollable {
+  padding-left: 5px;
+}

@@ -80,3 +80,7 @@
   }
 }
 
+.ellipsis {
+  text-overflow: ellipsis;
+}
+

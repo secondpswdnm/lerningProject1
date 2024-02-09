@@ -1,0 +1,8 @@
+.light {
+  --bg-color: #ffffff;
+  --inverted-bg-color: #0086e1;
+  --primary-color: #348bd2;
+  --secondary-color: #005bb6;
+  --inverted-primary-color: #45c5dc;
+  --inverted-secondary-color: #117070;
+}
