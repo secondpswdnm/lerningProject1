@@ -3,7 +3,7 @@ import { Button } from '06_shared/ui/Button/Button'
 import { ButtonTheme } from '06_shared/ui/Button/model/button'
 import { EyeIcon } from '06_shared/ui/EyeIcon/EyeIcon'
 import type { HTMLInputTypeAttribute, InputHTMLAttributes } from 'react'
-import React, { memo, useCallback, useMemo, useRef, useState } from 'react'
+import React, { memo, useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import cls from './Input.module.css'
 
 
@@ -32,6 +32,12 @@ export const Input = memo((props: InputProps) => {
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     onChange?.(e.target.value)
   }
+
+  useLayoutEffect(() => {
+    if(value){
+      setIsFocused(true)
+    }
+  }, [value])
 
   const onBlur = useCallback(() => {
     if(!value) {

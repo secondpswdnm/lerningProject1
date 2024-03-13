@@ -1,0 +1,15 @@
+.cart {
+  position: relative;
+}
+
+.qty {
+  background: var(--bg-color);
+  width: 20px;
+  border-radius: 30%;
+  border: 1px solid var(--inverted-bg-color);
+
+  position: absolute;
+  left: 18px;
+  top: 13px;
+
+}

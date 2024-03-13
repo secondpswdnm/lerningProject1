@@ -36,5 +36,15 @@
   width: 100%;
   padding: 15px 1px 15px 1px;
   height: calc(100dvh - var(--navbar-height));
-  /*overflow-y: auto;*/
+  overflow-y: auto;
+    &::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--inverted-bg-color);
+    border-radius: 5px;
+  }
 }

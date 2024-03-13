@@ -11,7 +11,7 @@ export interface IDevice {
   price: number
   rating: number
   img: string
-  info?: IDeviceInfo
+  info?: IDeviceInfo[]
 }
 
 export interface DeviceType {

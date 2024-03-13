@@ -8,6 +8,7 @@ import type { RouteProps } from 'react-router-dom'
 
 export type AppRouteProps = RouteProps & {
 	authOnly?: boolean
+  adminOnly?: boolean
 }
  
 export enum AppRoutes {
@@ -42,7 +43,8 @@ export const routeConfig: Record<AppRoutes, AppRouteProps> = {
   [AppRoutes.ADMIN]: {
     path: RoutePath.admin,
     element: <AdminPage />,
-    authOnly: true
+    authOnly: true,
+    adminOnly: true
   },
   [AppRoutes.DEVICE_DETAILS]: {
     path: `${RoutePath.device_details}:id`,

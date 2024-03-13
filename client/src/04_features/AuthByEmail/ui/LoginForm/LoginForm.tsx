@@ -1,5 +1,3 @@
-import { getLoginInfo, loginActions } from '04_features/AuthByEmail/model/slice/loginSlice'
-import { userActions } from '05_entities/User/model/slice/userSlice'
 import { classNames } from '06_shared/lib/classNames/classNames'
 import { useAppDispatch, useAppSelector } from '06_shared/lib/hooks/StoreHooks'
 import { Button } from '06_shared/ui/Button/Button'
@@ -8,6 +6,9 @@ import { Input } from '06_shared/ui/Input/Input'
 import { TextTheme } from '06_shared/ui/Text/model/text'
 import { Text } from '06_shared/ui/Text/Text'
 import React, { memo, useCallback, useMemo, useState } from 'react'
+import { loginByEmail } from '../../model/service/loginByEmail'
+import { registerByEmail } from '../../model/service/registerByEmail'
+import { authActions, getAuthInfo } from '../../model/slice/authSlice'
 import cls from './LoginForm.module.css'
 
 
@@ -20,24 +21,30 @@ export interface LoginFormProps {
 const LoginForm = memo((props: LoginFormProps) => {
   const { className, onSuccess } = props
   const dispatch = useAppDispatch()
-  const { email, password } = useAppSelector(getLoginInfo)
+  const { email, password } = useAppSelector(getAuthInfo)
   const [isLogin, setIsLogin] = useState<boolean>(true)
 
 
   const onChangeEmail = useCallback((value: string) => {
-    dispatch(loginActions.setEmail(value))
+    dispatch(authActions.setEmail(value))
   }, [dispatch])
 
   const onChangePassword = useCallback((value: string) => {
-    dispatch(loginActions.setPassword(value))
+    dispatch(authActions.setPassword(value))
   }, [dispatch])
 
   const onFormSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    dispatch(userActions.setIsAuth(true))
+    switch(isLogin) {
+      case false:
+        dispatch(registerByEmail({ email, password }))
+        break
+      default :
+        dispatch(loginByEmail({ email, password }))
+    }
     onSuccess()
 
-  }, [dispatch, onSuccess])
+  }, [dispatch, email, isLogin, onSuccess, password])
 
   const loginFormParts = useMemo(() => {
     return {

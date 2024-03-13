@@ -28,13 +28,18 @@ export const Modal = (props: ModalProps) => {
 
   const [isClosing, setIsClosing] = useState<boolean>(false)
   const [isMounted, setIsMounted] = useState<boolean>(false)
+  const [isOpening, setIsOpening] = useState<boolean>(false)
   const timeRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>
   const { theme } = useTheme()
 
   useEffect(() => {
     if(isOpen) {
       setIsMounted(true)
+      timeRef.current = setTimeout(() => {
+        setIsOpening(true)
+      }, ANIMATION_DELAY)
     }
+    return () => setIsOpening(false)
   }, [isOpen])
 
   const closeHandler = useCallback(() => {
@@ -69,7 +74,7 @@ export const Modal = (props: ModalProps) => {
   }, [isOpen, onKeyDown])
 
   const mods: Mods = {
-    [cls.opened]: isOpen,
+    [cls.opened]: isOpening,
     [cls.isClosing]: isClosing
   }
 

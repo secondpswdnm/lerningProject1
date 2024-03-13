@@ -1,4 +1,4 @@
-import type { StateSchema } from '01_app/providers/StoreProvider/config/StateSchema'
+import type { StateSchema } from '01_app/providers/StoreProvider'
 
 
 export const getDevices = (state: StateSchema) => state.device?.devices

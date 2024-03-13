@@ -14,7 +14,8 @@ const app = express()
 const dirname = getDirName(import.meta.url)
 
 app.use(cors({
-	credentials: true
+	credentials: true,
+	origin: process.env.CLIENT_URL
 }))
 app.use(express.json())
 app.use(cookieParser())

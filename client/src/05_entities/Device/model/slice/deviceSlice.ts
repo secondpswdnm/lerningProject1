@@ -10,7 +10,21 @@ const initialState: DeviceSchema = {
       name: 'iPhone 15 pro',
       price: 1000,
       rating: 0,
-      img: 'https://gadgetstore.kz/wa-data/public/shop/products/91/07/791/images/2395/2395.970.png'
+      img: 'https://gadgetstore.kz/wa-data/public/shop/products/91/07/791/images/2395/2395.970.png',
+      info: [
+        { id: 1, title: 'RAM', description: '8GB' },
+        { id: 2, title: 'Camera', description: '48MP Main, 12MP Ultra Wide, 12MP 3x Telephoto' },
+        {
+          id: 3, title: 'Chip',
+          description: 'A17 Pro, 6‑core CPU with 2 performance and 4 efficiency' +
+            ' cores,6‑core GPU, 16‑core Neural Engine'
+        },
+        {
+          id: 4,
+          title: 'Display',
+          description: '6.1‑inch (diagonal) all‑screen OLED display, 2556‑by‑1179-pixel resolution at 460 ppi'
+        },
+      ]
     },
     {
       id: 2,

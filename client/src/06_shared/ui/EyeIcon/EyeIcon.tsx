@@ -1,9 +1,8 @@
+import HideEye from '06_shared/assets/icons/closed_eye.svg'
+import Eye from '06_shared/assets/icons/eye.svg'
 import { classNames } from '06_shared/lib/classNames/classNames'
 import { Icon } from '06_shared/ui/Icon/Icon'
 import type { IconTheme } from '06_shared/ui/Icon/model/icon'
-import { memo } from 'react'
-import Eye from '06_shared/assets/icons/eye.svg'
-import HideEye from '06_shared/assets/icons/closed_eye.svg'
 
 
 interface EyeIconProps {
@@ -13,7 +12,7 @@ interface EyeIconProps {
   hide?: boolean
 }
 
-export const EyeIcon = memo((props: EyeIconProps) => {
+export const EyeIcon = (props: EyeIconProps) => {
   const {
     className,
     theme,
@@ -28,4 +27,4 @@ export const EyeIcon = memo((props: EyeIconProps) => {
       className={classNames('', [className])}
     />
   )
-})
+}

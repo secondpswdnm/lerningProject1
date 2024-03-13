@@ -1,7 +1,7 @@
 import { classNames } from '06_shared/lib/classNames/classNames'
 import { IconTheme } from '06_shared/ui/Icon/model/icon'
-import type { CSSProperties, FC, ReactNode, SVGProps } from 'react'
-import { memo, useMemo } from 'react'
+import type { CSSProperties, FC, SVGProps } from 'react'
+import { useMemo } from 'react'
 import cls from './Icon.module.css'
 
 
@@ -13,7 +13,7 @@ interface IconProps {
 
 }
 
-export const Icon = memo((props: IconProps) => {
+export const Icon =(props: IconProps) => {
   const {
     className,
     theme = IconTheme.PRIMARY,
@@ -36,4 +36,4 @@ export const Icon = memo((props: IconProps) => {
       className={classNames('', [className, cls[theme]])}
     />
   )
-})
+}

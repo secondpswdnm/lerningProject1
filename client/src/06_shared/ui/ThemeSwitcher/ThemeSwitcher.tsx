@@ -1,7 +1,7 @@
 import { Theme, useTheme } from '01_app/providers/ThemeProvider'
 import { classNames } from '06_shared/lib/classNames/classNames'
 import { ToggleSwitch } from '06_shared/ui/ToggleSwitch/ToggleSwitch'
-import { memo, useEffect, useLayoutEffect, useState } from 'react'
+import { memo, useLayoutEffect, useState } from 'react'
 
 
 interface ThemeSwitcherProps {
