@@ -3,7 +3,7 @@ import { LOCAL_STORAGE_ACCESS_TOKEN } from '06_shared/const/localstorage'
 import axios from 'axios'
 
 
-export const API_URL = 'http://localhost:7000/api'
+export const API_URL = 'http://192.168.1.245:7000/api'
 
 export const $api = axios.create({
   withCredentials: true,

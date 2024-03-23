@@ -5,18 +5,18 @@ import { getDirName } from './helpers/dirnameHelper.js'
 import * as model from './models/models.js'
 import fileUpload from 'express-fileupload'
 import cookieParser from 'cookie-parser'
-import cors from 'cors'
+import cors from 'cors' 
 import router from './routes/index.js'
 import errorHandler from './middleware/ErrorHandlingMiddleware.js'
 
 const PORT = process.env.PORT || 5050
 const app = express()
-const dirname = getDirName(import.meta.url)
+const dirname = getDirName(import.meta.url) 
 
-app.use(cors({
+app.use(cors({ 
 	credentials: true,
-	origin: process.env.CLIENT_URL
-}))
+	origin: process.env.CLIENT_URL.split(',')
+})) 
 app.use(express.json())
 app.use(cookieParser())
 app.use(express.static(path.resolve(dirname, 'static')))

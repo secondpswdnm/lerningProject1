@@ -10,7 +10,7 @@ const initialState: DeviceSchema = {
       name: 'iPhone 15 pro',
       price: 1000,
       rating: 0,
-      img: 'https://gadgetstore.kz/wa-data/public/shop/products/91/07/791/images/2395/2395.970.png',
+      img: 'https://img-prd-pim.poorvika.com/cdn-cgi/image/width=500,height=500,quality=75/product/Apple-iphone-15-pro-maxblack-titanium-1TB-Back-Front-View-Image.png',
       info: [
         { id: 1, title: 'RAM', description: '8GB' },
         { id: 2, title: 'Camera', description: '48MP Main, 12MP Ultra Wide, 12MP 3x Telephoto' },
