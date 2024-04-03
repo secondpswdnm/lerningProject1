@@ -1,0 +1,8 @@
+node_modules
+.git
+Dockerfile
+
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
